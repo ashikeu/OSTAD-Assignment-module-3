@@ -63,5 +63,5 @@ jobs:
       run: |
         pm2 stop module3 || true
         pm2 delete module3 || true
-        pm2 start app.js --name module3
+        pm2 start server.js --name module3
         pm2 save
