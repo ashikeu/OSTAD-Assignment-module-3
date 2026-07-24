@@ -39,10 +39,7 @@ jobs:
 
     needs: test
 
-    runs-on:
-      - self-hosted
-      - linux
-      - node
+    runs-on: self-hosted
 
     steps:
 
