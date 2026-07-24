@@ -61,9 +61,8 @@ jobs:
 
     - name: Deploy Application
       run: |
-        cd ~
+        rsync -av --delete ./ ~/OSTAD-Assignment-module-3/
         cd OSTAD-Assignment-module-3
-        pm2 stop module3 || true
-        pm2 delete module3 || true
-        pm2 start src/server.js --name module3
+        npm install
+        pm2 restart module3 || pm2 start src/server.js --name module3
         pm2 save
